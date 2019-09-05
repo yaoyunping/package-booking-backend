@@ -1,0 +1,6 @@
+CREATE TABLE form (
+  id VARCHAR(64) PRIMARY KEY,
+  person VARCHAR(64) NOT NULL,
+  phone VARCHAR(64) NOT NULL,
+  weight VARCHAR(64) NOT NULL,
+);

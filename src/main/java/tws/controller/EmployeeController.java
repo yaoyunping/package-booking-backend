@@ -14,7 +14,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("http://localhost:8081/")
 public class EmployeeController {
 
     @Autowired
@@ -25,7 +25,7 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeMapper.selectAll());
     }
 
-    @PostMapping("")
+    @PostMapping("/")
     public ResponseEntity<Employee> insert(@RequestBody Employee employee) {
         employeeMapper.insert(employee);
         return ResponseEntity.created(URI.create("/employees/" + employee.getId())).body(employee);
